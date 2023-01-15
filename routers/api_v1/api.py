@@ -1,11 +1,13 @@
 from fastapi import APIRouter
 from .authentication import login, register
 
-router = APIRouter()
+router = APIRouter(prefix="/api/v1")
+
+
 """
 These routes are for authentication
 -> login
 -> register
 """
-router.include_router(login.router, prefix="/auth", tags=["Login"])
-router.include_router(register.router, prefix="/auth", tags=["Register"])
+router.include_router(login.router, tags=["Login"])
+router.include_router(register.router, tags=["Register"])

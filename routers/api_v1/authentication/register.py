@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter()
+router = APIRouter(prefix="/auth")
 
 
 @router.get("/register")
