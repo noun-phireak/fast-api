@@ -2,7 +2,8 @@ import uvicorn
 from fastapi import FastAPI
 from routers.api_v1.api import router
 from fastapi.middleware.cors import CORSMiddleware
-
+# import dotenv
+# dotenv.load_dotenv()
 app = FastAPI()
 
 origins = [
